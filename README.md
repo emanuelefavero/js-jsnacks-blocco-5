@@ -17,64 +17,20 @@ In alternativa, eseguire uno snack specifico con Node:
 node snack-1/script.js
 ```
 
-## Soluzioni
+## Scelte tecniche
 
-### Snack 1
+- SNACK 1: ho usato `forEach` perché non serve creare un nuovo array o filtrare dati; l'obiettivo è solo eseguire un'azione per ogni stringa della lista.
 
-Scelta tecnica: ho usato `forEach` perché non serve creare un nuovo array o filtrare dati; l'obiettivo è solo eseguire un'azione per ogni stringa della lista.
+- SNACK 2: ho usato `forEach` perché devo solo leggere ogni oggetto e stampare una proprietà, senza trasformare l'array originale.
 
-### Snack 2
+- SNACK 3: ho usato `map` perché ogni elemento dell'array originale viene trasformato in un nuovo valore, mantenendo la stessa lunghezza della lista.
 
-Stampare in console il nome di ogni persona presente nell'array `people`.
+- SNACK 4: ho usato `map` perché devo estrarre una proprietà da ogni oggetto e ottenere un nuovo array più semplice.
 
-Scelta tecnica: ho usato `forEach` perché devo solo leggere ogni oggetto e stampare una proprietà, senza trasformare l'array originale.
+- SNACK 5: ho usato `filter` perché stiamo facendo filtraggio.
 
-### Snack 3
+- SNACK 6: ho usato `reduce` per ottenere entrambi gli array con una sola scansione. Ho lasciato come nota anche una soluzione alternativa con due `filter`, più leggibile ma meno efficiente.
 
-Creare un nuovo array con tutti i numeri incrementati di `1`.
+- SNACK 7: ho usato `find` perché serve recuperare un singolo oggetto che corrisponde a una condizione specifica.
 
-Scelta tecnica: ho usato `map` perché ogni elemento dell'array originale viene trasformato in un nuovo valore, mantenendo la stessa lunghezza della lista.
-
-### Snack 4
-
-Creare un nuovo array contenente solo i nomi degli autori dei post.
-
-Scelta tecnica: ho usato `map` perché devo estrarre una proprietà da ogni oggetto e ottenere un nuovo array più semplice.
-
-### Snack 5
-
-Creare un nuovo array contenente solo i numeri pari.
-
-Scelta tecnica: ho usato `filter` perché stiamo facendo filtraggio.
-
-### Snack 6
-
-Dividere le zucchine in due array: quelle lunghe almeno `15cm` e le restanti.
-
-Scelta tecnica: ho usato `reduce` per ottenere entrambi gli array con una sola scansione. Ho lasciato come nota anche una soluzione alternativa con due `filter`, più leggibile ma meno efficiente.
-
-### Snack 7
-
-Recuperare i dati dello studente con `id` uguale a `2`.
-
-Scelta tecnica: ho usato `find` perché serve recuperare un singolo oggetto che corrisponde a una condizione specifica.
-
-### Snack 8
-
-Recuperare la classe dello studente `Marco Lanci`.
-
-Scelta tecnica: ho usato `find` per individuare lo studente corretto e poi ho letto la proprietà `class`, separando i passaggi per rendere il codice più leggibile.
-
-## Struttura del progetto
-
-```txt
-js-jsnacks-blocco-5/
-├── index.html
-├── snack-1/
-│   ├── index.html
-│   └── script.js
-├── ...
-└── snack-8/
-    ├── index.html
-    └── script.js
-```
+- SNACK 8: ho usato `find` per individuare lo studente corretto e poi ho letto la proprietà `class`, separando i passaggi per rendere il codice più leggibile.
