@@ -26,3 +26,11 @@ const result = zucchine.reduce(
 const { long: longZucchine, short: shortZucchine } = result;
 console.log(longZucchine); // Risultato: zucchine >= 15
 console.log(shortZucchine); // Risultato: zucchine < 15
+
+// ---
+
+// Soluzione con 2 filter methods. Meno efficiente (scansiona l'array due volte), ma più leggibile.
+const longZucchine2 = zucchine.filter((zucchina) => zucchina.length >= 15);
+const shortZucchine2 = zucchine.filter((zucchina) => zucchina.length < 15);
+console.log(longZucchine2); // Risultato: zucchine >= 15
+console.log(shortZucchine2); // Risultato: zucchine < 15
