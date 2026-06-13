@@ -12,3 +12,17 @@ const zucchine = [
 ];
 
 // A partire dall'array fornito, crea due array. Uno con le zucchine più lunghe di almeno 15cm. L'altro con le restanti.
+const result = zucchine.reduce(
+  (acc, zucchina) => {
+    {
+      if (zucchina.length >= 15) acc.long.push(zucchina);
+      else acc.short.push(zucchina);
+      return acc;
+    }
+  },
+  { long: [], short: [] },
+);
+
+const { long: longZucchine, short: shortZucchine } = result;
+console.log(longZucchine); // Risultato: zucchine >= 15
+console.log(shortZucchine); // Risultato: zucchine < 15
